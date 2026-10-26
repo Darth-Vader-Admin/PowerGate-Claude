@@ -1,4 +1,4 @@
-// Route table. Sidebar entries live in config/navigation.js and point at these paths.
+// Route table. Header menu entries live in config/navigation.js and point at these paths.
 import ClientDashboard from "pages/client/ClientDashboard";
 import MyProfile from "pages/client/MyProfile";
 import MyTasks from "pages/client/MyTasks";

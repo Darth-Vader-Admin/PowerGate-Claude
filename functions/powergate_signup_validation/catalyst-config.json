@@ -1,0 +1,11 @@
+{
+  "deployment": {
+    "name": "powergate_signup_validation",
+    "stack": "node18",
+    "type": "basicio",
+    "env_variables": {}
+  },
+  "execution": {
+    "main": "index.js"
+  }
+}

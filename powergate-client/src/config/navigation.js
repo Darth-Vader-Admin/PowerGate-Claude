@@ -1,4 +1,5 @@
-// Sidebar menus per user type. Pages are wired to these paths in routes.js.
+// Header menus per user type. Pages are wired to these paths in routes.js.
+// An entry with `children` renders as a dropdown in the header.
 import appConfig from "config/app";
 
 export const CLIENT_HOME = "/client/dashboard";
@@ -8,26 +9,35 @@ export function homeRouteFor(role) {
   return role === "csp" ? CSP_HOME : CLIENT_HOME;
 }
 
-// icon keys map to components in components/layout/navIcons.js
 export const clientMenu = [
   ...(appConfig.creatorHomePageUrl
-    ? [{ key: "home", label: "Home Page", icon: "home", href: appConfig.creatorHomePageUrl }]
+    ? [{ key: "home", label: "Home", href: appConfig.creatorHomePageUrl }]
     : []),
-  { key: "dashboard", label: "My Dashboard", icon: "dashboard", path: "/client/dashboard" },
-  { key: "profile", label: "My Profile", icon: "profile", path: "/client/profile" },
-  { key: "tasks", label: "My Tasks", icon: "tasks", path: "/client/tasks" },
-  { key: "requests", label: "Requests", icon: "requests", path: "/client/requests" },
-  { key: "faq", label: "Help & FAQ", icon: "faq", path: "/client/help" },
+  { key: "dashboard", label: "Dashboard", path: "/client/dashboard" },
+  { key: "tasks", label: "My Tasks", path: "/client/tasks" },
+  { key: "requests", label: "Requests", path: "/client/requests" },
+  { key: "profile", label: "My Profile", path: "/client/profile" },
+  { key: "faq", label: "Help & FAQ", path: "/client/help" },
 ];
 
 export const cspMenu = [
-  { key: "approval", label: "Approval Screen", icon: "approval", path: "/csp/approvals" },
-  { section: true, key: "sec-projects", label: "Projects" },
-  { key: "p-add", label: "Add Project", icon: "add", path: "/csp/projects/new" },
-  { key: "p-my", label: "My Projects", icon: "folder", path: "/csp/projects/mine" },
-  { key: "p-all", label: "All Projects", icon: "folder", path: "/csp/projects/all" },
-  { section: true, key: "sec-tasks", label: "Tasks" },
-  { key: "t-add", label: "Add Task", icon: "add", path: "/csp/tasks/new" },
-  { key: "t-csp", label: "All CSP Tasks", icon: "tasks", path: "/csp/tasks/csp" },
-  { key: "t-all", label: "All Tasks", icon: "tasks", path: "/csp/tasks/all" },
+  { key: "approval", label: "Approvals", path: "/csp/approvals" },
+  {
+    key: "projects",
+    label: "Projects",
+    children: [
+      { key: "p-my", label: "My Projects", path: "/csp/projects/mine" },
+      { key: "p-all", label: "All Projects", path: "/csp/projects/all" },
+      { key: "p-add", label: "Add Project", path: "/csp/projects/new" },
+    ],
+  },
+  {
+    key: "tasks",
+    label: "Tasks",
+    children: [
+      { key: "t-csp", label: "All CSP Tasks", path: "/csp/tasks/csp" },
+      { key: "t-all", label: "All Tasks", path: "/csp/tasks/all" },
+      { key: "t-add", label: "Add Task", path: "/csp/tasks/new" },
+    ],
+  },
 ];

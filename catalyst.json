@@ -1,6 +1,9 @@
 {
   "functions": {
-    "targets": ["powergate_api"],
+    "targets": [
+      "powergate_api",
+      "powergate_signup_validation"
+    ],
     "ignore": [],
     "source": "functions"
   },

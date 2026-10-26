@@ -1,0 +1,10 @@
+{
+  "name": "powergate_signup_validation",
+  "version": "1.0.0",
+  "description": "Catalyst Custom User Validation: only emails known to the PowerGate Creator app can sign up",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "zcatalyst-sdk-node": "3.4.0"
+  }
+}
