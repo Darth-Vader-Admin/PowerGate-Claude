@@ -65,14 +65,18 @@ function CatalystSignIn() {
 
   // Catalyst renders its embedded login iframe into this element.
   // The iframe keeps a short default height, so set it explicitly to avoid clipping.
+    // Catalyst renders its embedded login iframe into this element and sets an inline height on it,
+  // so the size here needs !important to win.
   return (
     <Box
       id={appConfig.loginElementId}
       sx={{
+        minHeight: 560,
         "& iframe": {
-          width: "100%",
-          height: 560, // increase if the Catalyst form is still cut off at the bottom
-          border: 0,
+          width: "100% !important",
+          height: "560px !important",
+          minHeight: 560,
+          border: "0 !important",
           borderRadius: "12px",
           display: "block",
         },
