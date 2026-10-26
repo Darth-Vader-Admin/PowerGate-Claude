@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "targets": ["powergate_api"],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "powergate-client",
+    "plugin": "powergate-client/node_modules/zcatalyst-cli-plugin-react"
+  }
+}

@@ -1,0 +1,57 @@
+// PowerGate design tokens (from the approved revamp mockups).
+const tokens = {
+  color: {
+    pageBg: "#f2f2f4",
+    shellBlack: "#000000",
+    panel: "#0a0a0a",
+    panelDeep: "#050505",
+    card: "#141414",
+    cardHeader: "#111111",
+    input: "#0f0f0f",
+    border: "#262626",
+    borderStrong: "#333333",
+    borderMuted: "#1f1f1f",
+    borderButton: "#3f3f3f",
+    text: "#f5f5f5",
+    textSoft: "#e5e5e5",
+    textMuted: "#a3a3a3",
+    textSubtle: "#8f8f8f",
+    textDim: "#b5b5b5",
+    accent: "#be1e2e",
+    accentHover: "#a51a28",
+    accentTint: "#2a0c10",
+    accentSoft: "#1f0b0e",
+    link: "#ff6b6b",
+    linkHover: "#ff9a9a",
+    sidebar: "#ffffff",
+    sidebarText: "#1f1f1f",
+    sidebarSection: "#5f5f5f",
+    sidebarGradientTop: "#f8d3d8",
+    brandMark: "#8b1c24",
+  },
+  pill: {
+    success: { bg: "#0b2e1a", fg: "#4ade80" },
+    warning: { bg: "#3a2e05", fg: "#facc15" },
+    error: { bg: "#3a0d10", fg: "#ff8a8a" },
+    info: { bg: "#10233f", fg: "#93c5fd" },
+    neutral: { bg: "#262626", fg: "#cfcfcf" },
+  },
+  battery: {
+    used: "#ef4444",
+    committed: "#facc15",
+    available: "#22c55e",
+  },
+  font: {
+    heading: "Outfit, Lato, system-ui, sans-serif",
+    body: "Lato, system-ui, sans-serif",
+  },
+  radius: {
+    sm: 10,
+    md: 12,
+    lg: 16,
+    xl: 18,
+    xxl: 24,
+  },
+};
+
+export default tokens;

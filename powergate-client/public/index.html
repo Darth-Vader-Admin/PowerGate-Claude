@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="description" content="PowerGate — BMI work approval portal" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>PowerGate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Lato:wght@400;700&display=swap"
+    />
+    <!--
+      Catalyst Web SDK (Embedded Authentication).
+      /__catalyst/sdk/init.js is served by Catalyst (catalyst serve / deployed app);
+      it does not exist under plain `npm start`, which is why mock mode exists.
+    -->
+    <script src="https://static.zohocdn.com/catalyst/sdk/js/4.4.0/catalystWebSDK.js"></script>
+    <script src="/__catalyst/sdk/init.js"></script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run PowerGate.</noscript>
+    <div id="app"></div>
+  </body>
+</html>
