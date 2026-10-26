@@ -64,7 +64,21 @@ function CatalystSignIn() {
   }
 
   // Catalyst renders its embedded login iframe into this element.
-  return <Box id={appConfig.loginElementId} sx={{ minHeight: 420, "& iframe": { width: "100%", border: 0 } }} />;
+  // The iframe keeps a short default height, so set it explicitly to avoid clipping.
+  return (
+    <Box
+      id={appConfig.loginElementId}
+      sx={{
+        "& iframe": {
+          width: "100%",
+          height: 560, // increase if the Catalyst form is still cut off at the bottom
+          border: 0,
+          borderRadius: "12px",
+          display: "block",
+        },
+      }}
+    />
+  );
 }
 
 export default function SignIn() {

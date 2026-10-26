@@ -32,8 +32,9 @@ function clientRoot() {
 export function renderCatalystLogin() {
   if (!isSdkAvailable()) return false;
   const root = clientRoot();
-  sdk().auth.signIn(appConfig.loginElementId, {
-    css_url: `${root}${appConfig.loginCssPath}`,
+    sdk().auth.signIn(appConfig.loginElementId, {
+    // css_url removed: a custom file replaces Catalyst's default CSS entirely.
+    // Re-add only with a full stylesheet based on Catalyst's default.
     service_url: `${root}index.html`,
   });
   return true;
